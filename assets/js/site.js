@@ -710,7 +710,7 @@
     function onScroll() { if (header) header.classList.toggle('is-scrolled', window.scrollY > 8); }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-    if (/[?&]switcher=1/.test(location.search)) {
+    if (!/[?&]switcher=0/.test(location.search)) {
       var sw = $('#fb-switcher');
       if (sw) {
         sw.hidden = false;
